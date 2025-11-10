@@ -21,19 +21,13 @@ A Spring Boot application providing a SOAP-based API for creating orders, with p
 
 ## Setup Instructions
 
-### 1. Clone the Repository
-```bash
-git clone <repository-url>
-cd ordersyncsoap
-```
-
-### 2. Configure Dependencies
+### 1. Configure Dependencies
 Ensure Maven resolves all dependencies in `pom.xml`:
 ```bash
 mvn clean install
 ```
 
-### 5. Run the Application
+### 2. Run the Application
 ```bash
 mvn spring-boot:run
 ```
@@ -84,7 +78,6 @@ Use Postman or SoapUI to send a SOAP request to `http://localhost:8080/ws`.
 - **404 Error on `/ws`**: Ensure `WebServiceConfig.java` and `order-service.xsd` are present and correctly configured. Check `http://localhost:8080/ws/order-service.wsdl`.
 - **Compilation Error**: Update Lombok to `1.18.34` and `maven-compiler-plugin` to `3.13.1` in `pom.xml`. Run `mvn clean install -e -X` for debug output.
 - **Database Issues**: Verify PostgreSQL is running and credentials match `application.properties`.
-- **Kafka Issues**: Confirm Kafka and ZooKeeper are up (`docker-compose ps`).
 
 ## Contributing
 1. Fork the repository.
